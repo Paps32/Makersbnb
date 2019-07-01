@@ -5,15 +5,21 @@ We are building a web application that allows users to list spaces they have ava
 ## User stories
 
 ```
-As a User so that I can join Makers BnB I want to sign up to the page.
+As a User
+So that I can join Makers BnB 
+I want to sign up to the page
 ```
 
 ```
-As a User so that I can view my account I want to be able to log in to Makers BnB.
+As a User 
+So that I can view my account 
+I want to be able to log in to Makers BnB
 ```
 
 ```
-As a User so that I can add spaces to rent I want to be able to list spaces for rent.
+As a User 
+So that I can add spaces to rent 
+I want to be able to list spaces for rent
 
 Each space should have:
 • description

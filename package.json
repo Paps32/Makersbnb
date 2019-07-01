@@ -1,0 +1,26 @@
+{
+  "name": "makersbnb",
+  "version": "1.0.0",
+  "description": "AirBnB style Web App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint \"./**/*.js\" --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paps32/Makersbnb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Paps32/Makersbnb/issues"
+  },
+  "homepage": "https://github.com/Paps32/Makersbnb#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jasmine": "^2.10.1"
+  }
+}
