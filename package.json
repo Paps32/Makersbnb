@@ -22,5 +22,8 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jasmine": "^2.10.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }

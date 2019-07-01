@@ -1,12 +1,12 @@
-const express = require('express');
+var express = require('express');
 
-const app = express();
+var app = express();
 
-app.get('get', function (req, res){
+app.get('/', function (req, res){
   res.send('ci with travis');
 });
 
-const server = app.listen(3000, function (){
+var server = app.listen(3000, function (){
   console.log('app is running on port 3000');
 });
 
