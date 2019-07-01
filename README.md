@@ -1,4 +1,7 @@
 # Makers BnB
+
+[![Build Status](https://travis-ci.org/Paps32/Makersbnb.svg?branch=master)](https://travis-ci.org/Paps32/Makersbnb)
+
 Summary of our project:
 We are building a web application that allows users to list spaces they have available, and to hire spaces for the night.
 
