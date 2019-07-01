@@ -31,37 +31,55 @@ Each space should have:
 ```
 
 ```
-As a User so that I can see my spaces I would like to view a list of them.
+As a User 
+So that I can see my spaces 
+I would like to view a list of them.
 ```
 
 ```
-As a User so that I can change the details of my spaces I would like to be able to edit them.
+As a User 
+So that I can change the details of my spaces 
+I would like to be able to edit them.
 ```
 
 ```
-As a User so that I can remove a space I would like to be able to delete a listing.
+As a User 
+So that I can remove a space 
+I would like to be able to delete a listing.
 ```
 
 ```
-As a User so that I can offer my space I would like to be able to offer dates the space is free.
+As a User 
+So that I can offer my space 
+I would like to be able to offer dates the space is free.
 ```
 
 ```
-As a User so that I can book a space I would like to be able to request the space for a night.
+As a User 
+So that I can book a space 
+I would like to be able to request the space for a night.
 ```
 
 ```
-As a User so that I can decide who stays in my space I would like to be able to approve bookings.
+As a User
+So that I can decide who stays in my space 
+I would like to be able to approve bookings.
 ```
 
 ```
-As a User so that I can know a space has been booked I would like to receive a confirmation.
+As a User 
+So that I can know a space has been booked 
+I would like to receive a confirmation.
 ```
 
 ```
-As A User so that I can I know which dates the space is available I would like to be able to see unavailable dates listed.
+As A User 
+So that I can I know which dates the space is available 
+I would like to be able to see unavailable dates listed.
 ```
 
 ```
-As a User so that I don't miss out on a booking I would like to be able to have a space available until confirmation is received.
+As a User 
+So that I don't miss out on a booking 
+I would like to be able to have a space available until confirmation is received.
 ```

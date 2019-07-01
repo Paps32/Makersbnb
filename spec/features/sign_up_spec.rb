@@ -13,6 +13,10 @@ feature 'access to MakersBnB' do
     fill_in :password, with: "12345"
     fill_in :username, with: "I_love_makers_19"
     click_button 'Sign up'
-    expect(page).to have_content 'Thank you for signing up'
+    expect(page).to have_current_path('/makers/login')
+    # fill_in :email, with: "makers@gmail.com"
+    # fill_in :password, with: "12345"
+    # click_button 'Login'
+    # expect(page).to have_current_path(makers/spaces)
   end
 end
