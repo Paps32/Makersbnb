@@ -2,9 +2,11 @@
 
 source 'https://rubygems.org'
 
-ruby '2.6.3'
+ruby '2.5.0'
 
 group :production do
+  gem 'data_mapper'
+  gem 'dm-postgres-adapter'
   gem 'pg'
   gem 'sinatra'
 end

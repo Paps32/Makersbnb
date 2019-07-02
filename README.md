@@ -93,7 +93,7 @@ User
 | log in | ----- |
 | create space | space |
 | list space | spaces |
-| book space | spaces/booking
+| book space | spaces/booking |
 
 
 

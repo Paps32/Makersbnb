@@ -12,7 +12,7 @@ feature 'access to MakersBnB' do
     fill_in :password, with: "12345"
     fill_in :username, with: "I_love_makers_19"
     click_button 'Sign up'
-    expect(page).to have_current_path('/makers/login')    
+    expect(page).to have_current_path('/makers/login')
   end
 
   xscenario 'log in' do
@@ -20,7 +20,7 @@ feature 'access to MakersBnB' do
     fill_in :email, with: "makers@gmail.com"
     fill_in :password, with: "12345"
     click_button 'Sign Up'
-    expect(page).to have_current_path('makers/spaces')
+    expect(page).to have_current_path('makers/login')
     fill_in :email, with: "makers@gmail.com"
     fill_in :password, with: "12345"
     click_button 'Login'
