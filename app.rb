@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
+require 'data_mapper'
 require 'sinatra/base'
+require 'rubygems'
+require './lib/user.rb'
 
 class MakersBnB < Sinatra::Base
   enable :sessions
@@ -14,9 +17,10 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/makers/sign-up' do
-    session[:email] = params[:email]
-    session[:password] = params[:password]
-    session[:username] = params[:username]
+    email = params[:email]
+    password = params[:password]
+    username = params[:username]
+    User.sign_up(email: email, password: password, username: username)
     redirect '/makers/login'
   end
 
