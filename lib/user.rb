@@ -14,5 +14,5 @@ class User
   has n, :space
 end
 
-DataMapper.finalize 
+
 User.auto_upgrade!

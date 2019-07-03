@@ -4,6 +4,10 @@ require 'data_mapper'
 require 'sinatra/base'
 require 'rubygems'
 require './lib/user.rb'
+require './lib/space.rb'
+
+DataMapper.finalize
+
 
 class MakersBnB < Sinatra::Base
   enable :sessions
@@ -32,8 +36,24 @@ class MakersBnB < Sinatra::Base
 
   end
 
+  get '/makers/spaces' do
+
+  end
+
   get '/makers/spaces/new' do
     erb :'spaces/new'
+  end
+
+  post '/makers/spaces/new' do
+    name = params[:name]
+    description = params[:description]
+    price = params[:price]
+    Space.create({
+      :name => name,
+      :description => description,
+      :price => price
+    })
+    redirect '/makers/spaces'
   end
 
   run! if app_file == $0
