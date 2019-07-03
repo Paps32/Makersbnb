@@ -20,15 +20,15 @@ class MakersBnB < Sinatra::Base
     email = params[:email]
     password = params[:password]
     username = params[:username]
-    User.sign_up(email: email, password: password, username: username)
+    User.create({
+      :email => email,
+      :password => password,
+      :username => username
+      })
     redirect '/makers/login'
   end
 
   get '/makers/login' do
-
-  end
-
-  get '/makers/spaces' do
 
   end
 
