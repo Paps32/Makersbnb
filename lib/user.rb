@@ -27,8 +27,3 @@ user.password = 'makers'
 user.username = 'WhoDoesntLoveCoding'
 user.save!
 
-puts "default database"
-p User.all
-p User.first(:username => 'WhoDoesntLoveCoding')
-
-puts "-----"
