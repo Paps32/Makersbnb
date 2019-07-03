@@ -30,13 +30,22 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/makers/login' do
-
+    erb :'login'
   end
 
   get '/makers/spaces' do
     @spaces = Space.all
     erb :'spaces/index'
   end
+  
+  post '/makers/login' do
+    user = User.first(:email => params[:email])
+    if user
+      redirect "/makers/spaces/#{user.id}"
+    else
+      redirect '/makers/login'
+    end
+  end 
 
   get '/makers/spaces/new' do
     erb :'spaces/new'
