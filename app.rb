@@ -28,16 +28,13 @@ class MakersBnB < Sinatra::Base
 
   end
 
- get '/makers/spaces' do
+  get '/makers/spaces' do
 
- end
+  end
 
- get '/makers/spaces/new' do
-erb :'spaces/new'
-
- end
-
-
+  get '/makers/spaces/new' do
+    erb :'spaces/new'
+  end
 
   run! if app_file == $0
 end
