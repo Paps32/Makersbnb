@@ -15,4 +15,4 @@ class User
 end
 
 
-User.auto_upgrade!
+# User.auto_upgrade!

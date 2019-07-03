@@ -9,10 +9,9 @@ class Space
       property :id, Serial
       property :name, String
       property :description, String
-      property :price, Integer
+      property :price, Intåeger
 
       belongs_to :user
-    end
-
+end
      
-    Space.auto_upgrade!
+    # Space.auto_upgrade!

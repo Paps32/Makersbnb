@@ -6,9 +6,6 @@ require 'rubygems'
 require './lib/user.rb'
 require './lib/space.rb'
 
-DataMapper.finalize
-
-
 class MakersBnB < Sinatra::Base
   enable :sessions
 
