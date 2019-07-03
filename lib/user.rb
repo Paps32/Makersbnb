@@ -10,6 +10,9 @@ class User
   property :email, String
   property :password, String
   property :username, String
+
+  has n, :space
 end
 
-User.auto_upgrade!
+
+# User.auto_upgrade!
