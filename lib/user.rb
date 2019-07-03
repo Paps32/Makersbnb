@@ -13,6 +13,4 @@ class User
 
   has n, :space
 end
-
-
 # User.auto_upgrade!
