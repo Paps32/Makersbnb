@@ -34,7 +34,8 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/makers/spaces' do
-
+    @spaces = Space.all
+    erb :'spaces/index'
   end
 
   get '/makers/spaces/new' do
