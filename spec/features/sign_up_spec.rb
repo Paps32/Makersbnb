@@ -19,11 +19,11 @@ feature 'access to MakersBnB' do
     visit('/makers/sign-up')
     fill_in :email, with: "makers@gmail.com"
     fill_in :password, with: "12345"
-    click_button 'Sign Up'
-    expect(page).to have_current_path('makers/login')
+    click_button 'Sign up'
+    expect(page).to have_current_path('/makers/login')
     fill_in :email, with: "makers@gmail.com"
     fill_in :password, with: "12345"
     click_button 'Login'
-    expect(page).to have_current_path('makers/account')
+    expect(page).to have_current_path('/makers/account')
   end
 end
