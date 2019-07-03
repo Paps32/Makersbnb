@@ -23,7 +23,8 @@ feature 'access to MakersBnB' do
     expect(page).to have_current_path('/makers/login')
     fill_in :email, with: "makers@gmail.com"
     fill_in :password, with: "12345"
-    click_button 'Login'
-    expect(page).to have_current_path('/makers/account')
+    click_button 'Log in'
+    user = User.first(:email => 'makers@gmail.com')
+    expect(page).to have_current_path("/makers/spaces/#{user.id}")
   end
 end
