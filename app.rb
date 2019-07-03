@@ -13,7 +13,7 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/makers/sign-up' do
-    erb :'makers/sign_up'
+    erb :sign_up
   end
 
   post '/makers/sign-up' do
@@ -26,6 +26,14 @@ class MakersBnB < Sinatra::Base
 
   get '/makers/login' do
 
+  end
+
+  get '/makers/spaces' do
+
+  end
+
+  get '/makers/spaces/new' do
+    erb :'spaces/new'
   end
 
   run! if app_file == $0
