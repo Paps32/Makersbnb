@@ -10,20 +10,6 @@ class User
   property :email, String
   property :password, String
   property :username, String
-
-  def self.sign_up(email:, password:, username:)
-    User.create({
-      :email => email,
-      :password => password,
-      :username => username
-      })
-  end
 end
 
 User.auto_upgrade!
-user = User.new
-user.email = 'lovecoding@makers.com'
-user.password = 'makers'
-user.username = 'WhoDoesntLoveCoding'
-user.save!
-
