@@ -4,7 +4,7 @@ DATABASE_URL = "postgres://student@127.0.0.1:5432/makersbnb_test"
 DataMapper.setup(:default, DATABASE_URL)
 
 class User
-  p ENV
+
   include DataMapper::Resource
 
   property :id, Serial
