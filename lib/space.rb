@@ -9,7 +9,7 @@ class Space
   property :id, Serial
   property :name, String
   property :description, String
-  property :price, Intåeger
+  property :price, Integer
 
   belongs_to :user
 end

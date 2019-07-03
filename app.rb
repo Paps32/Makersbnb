@@ -30,7 +30,7 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/makers/login' do
-    erb :'login'
+    erb :login
   end
 
   get '/makers/spaces' do
