@@ -14,4 +14,3 @@ class Space
 
   belongs_to :user
 end
-
