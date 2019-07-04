@@ -115,6 +115,6 @@ Spaces
 3. In terminal run `psql`
 4. Create the following databases with:
 ```
-CREATE DATABASE makersbnb;
+CREATE DATABASE makersbnb_development;
 CREATE DATABASE makersbnb_test;
 ```
