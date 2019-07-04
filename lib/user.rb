@@ -1,7 +1,8 @@
 require 'data_mapper'
+require 'dm-core'
 
-DATABASE_URL = "postgres://localhost/makersbnb_test"
-DataMapper.setup(:default, DATABASE_URL)
+# DATABASE_URL = "postgres://localhost/makersbnb_test"
+# DataMapper.setup(:default, DATABASE_URL)
 
 class User
   include DataMapper::Resource
@@ -13,4 +14,4 @@ class User
 
   has n, :space
 end
-# User.auto_upgrade!
+
