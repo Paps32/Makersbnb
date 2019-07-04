@@ -1,10 +1,14 @@
+<form action="/makers/spaces/new" method="get">
+  <input type="submit" value="Add space" />
+</form>
+
 <h1> Below are all the available listings: </h1>
 <ul>
     <% @spaces.each do |space| %>
         <li>
            <h1><%= space.name %></h1>
            <h4> Description </h4>
-           <p><%= space.description %></p>          
+           <p><%= space.description %></p>
            <h4>£<%= space.price %></h4>
          </li>
     <% end %>

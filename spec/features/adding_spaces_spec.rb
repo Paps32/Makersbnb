@@ -6,8 +6,6 @@ feature 'add spaces to listing' do
     user = User.first(:email => 'makers@gmail.com')
     expect(page).to have_current_path("/makers/spaces/#{user.id}")
 
-
-
     # add & list a new space
     add_space('wedge room', 'bit of a hard floor', '20')
     expect(page).to have_current_path("/makers/spaces/#{user.id}")
