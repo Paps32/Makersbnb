@@ -15,7 +15,9 @@ require 'data_mapper'
 require 'database_cleaner'
 require 'simplecov'
 require 'simplecov-console'
-require './helpers'
+require 'helpers/sign_up.rb'
+require 'helpers/log_in.rb'
+require 'helpers/add_space.rb'
 
 # Tell Capybara to talk to BookmarkManager
 Capybara.app = MakersBnB
