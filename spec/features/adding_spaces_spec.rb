@@ -2,10 +2,7 @@ feature 'add spaces to listing' do
   scenario 'user can add a new space to their account' do
     # sign up new user
     visit('/makers/sign-up')
-    fill_in :email, with: "makers@gmail.com"
-    fill_in :password, with: "12345"
-    fill_in :username, with: "I_love_makers_19"
-    click_button 'Sign up'
+    sign_in
     user = User.first(:email => 'makers@gmail.com')
 
     # login as user
@@ -15,7 +12,7 @@ feature 'add spaces to listing' do
     click_button 'Log in'
     expect(page).to have_current_path("/makers/spaces/#{user.id}")
 
-    # add & list a new space 
+    # add & list a new space
     click_button 'Add space'
     expect(page).to have_current_path('/makers/spaces/new')
     fill_in :name, with: "beautiful resort"
