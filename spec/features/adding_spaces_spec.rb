@@ -9,9 +9,8 @@ feature 'add spaces to listing' do
 
 
     # add & list a new space
-    expect(page).to have_current_path('/makers/spaces/new')
-    add_space
+    add_space('wedge room', 'bit of a hard floor', '20')
     expect(page).to have_current_path("/makers/spaces/#{user.id}")
-    expect(page).to have_content('beautiful resort', 'quality comfortable chair with massive screen')
+    expect(page).to have_content('wedge room', 'bit of a hard floor', '20')
   end
 end
