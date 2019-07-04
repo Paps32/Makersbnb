@@ -10,7 +10,7 @@ class MakersBnB < Sinatra::Base
   enable :sessions
 
   get '/' do
-    erb :homepage
+    erb :index
   end
 
   get '/makers/sign-up' do
