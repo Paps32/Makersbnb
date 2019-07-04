@@ -1,11 +1,16 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/style.css"/>
+</head>
+
 <h1> Below are all the available listings: </h1>
 <ul>
     <% @spaces.each do |space| %>
         <li>
            <h1><%= space.name %></h1>
            <h4> Description </h4>
-           <p><%= space.description %></p>          
-           <h4>£<%= space.price %></h4>
+           <p><%= space.description %></p>
+           <h4>£<%= space.price %>/night</h4>
          </li>
     <% end %>
 </ul>
