@@ -39,19 +39,19 @@ class MakersBnB < Sinatra::Base
     @spaces = Space.all
     erb :'spaces/index'
   end
-  
+
   post '/makers/login' do
     p "BEFORE"
     user = User.first(:email => params[:email])
     p "AFTER"
-    
+
     p "USER: #{user}"
     if user
       redirect "/makers/spaces/#{user.id}"
     else
       redirect '/makers/login'
     end
-  end 
+  end
 
   get '/makers/spaces/new' do
     erb :'spaces/new'
@@ -61,12 +61,12 @@ class MakersBnB < Sinatra::Base
     name = params[:name]
     description = params[:description]
     price = params[:price]
-    Space.create({
+    user = Space.create({
       :name => name,
       :description => description,
       :price => price
     })
-    redirect '/makers/spaces'
+    redirect "/makers/spaces/#{user.id}"
   end
 
   run! if app_file == $0
