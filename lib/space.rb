@@ -13,5 +13,6 @@ class Space
 
   belongs_to :user
 end
-     
+
     # Space.auto_upgrade!
+DataMapper.finalize

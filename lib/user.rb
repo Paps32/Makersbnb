@@ -12,5 +12,6 @@ class User
   property :username, String
 
   has n, :space
+
 end
 # User.auto_upgrade!

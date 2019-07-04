@@ -18,6 +18,7 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/makers/sign-up' do
+    p params
     email = params[:email]
     password = params[:password]
     username = params[:username]
@@ -37,7 +38,7 @@ class MakersBnB < Sinatra::Base
     @spaces = Space.all
     erb :'spaces/index'
   end
-  
+
   post '/makers/login' do
     user = User.first(:email => params[:email])
     if user
@@ -45,7 +46,7 @@ class MakersBnB < Sinatra::Base
     else
       redirect '/makers/login'
     end
-  end 
+  end
 
   get '/makers/spaces/new' do
     erb :'spaces/new'
