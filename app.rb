@@ -8,7 +8,6 @@ require './lib/space.rb'
 require './db/data_mapper_setup'
 require 'dm-postgres-adapter'
 
-
 class MakersBnB < Sinatra::Base
   enable :sessions
 

@@ -14,4 +14,3 @@ class User
 
   has n, :space
 end
-

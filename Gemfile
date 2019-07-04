@@ -13,8 +13,8 @@ end
 
 group :development, :test do
   gem 'capybara'
-  gem 'rspec'
   gem 'database_cleaner'
+  gem 'rspec'  
   gem 'rubocop'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false

@@ -6,7 +6,8 @@ require_relative '../lib/space'
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/makersbnb_#{ENV['RACK_ENV']}")
 
-# This checks the models for validity + initializes all properties associated with relationships.
+# This checks the models for validity 
+# Initializes all properties associated with relationships.
 DataMapper.finalize
 
 # Create tables if they don't exist.
