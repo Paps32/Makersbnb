@@ -1,4 +1,3 @@
-
 require 'data_mapper'
 require 'sinatra/base'
 require 'rubygems'
@@ -43,8 +42,7 @@ class MakersBnB < Sinatra::Base
     end
   end
 
-  get '/makers/spaces/new' do
-    p "PARAMS: #{params}"
+  get '/makers/spaces/new' do 
     erb :'spaces/new'
   end
 
@@ -52,8 +50,10 @@ class MakersBnB < Sinatra::Base
     user = Space.create({
       :name => params[:name],
       :description => params[:description],
-      :price => params[:price]
+      :price => params[:price],
+      :user_id => 1
     })
+    p user
     redirect "/makers/spaces/#{user.id}"
   end
 
