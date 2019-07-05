@@ -33,8 +33,8 @@ class MakersBnB < Sinatra::Base
     erb :login
   end
 
-  post '/makers/login' do    
-    user = User.first(:email => params[:email])    
+  post '/makers/login' do
+    user = User.first(:email => params[:email])
     if user
       redirect "/makers/spaces/#{user.id}"
     else
@@ -42,25 +42,24 @@ class MakersBnB < Sinatra::Base
     end
   end
 
-  get '/makers/spaces/new' do 
+  get '/makers/spaces/new' do
     erb :'spaces/new'
   end
 
-  post '/makers/spaces/new' do    
+  post '/makers/spaces/new' do
     user = Space.create({
       :name => params[:name],
       :description => params[:description],
       :price => params[:price],
       :user_id => 1
     })
-    p user
     redirect "/makers/spaces/#{user.id}"
   end
 
   get '/makers/spaces/:id' do
     @spaces = Space.all
     erb :'spaces/index'
-  end  
+  end
 
   run! if app_file == $0
 end

@@ -18,6 +18,7 @@ require 'simplecov-console'
 require 'helpers/sign_up.rb'
 require 'helpers/log_in.rb'
 require 'helpers/add_space.rb'
+require 'pry'
 
 # Tell Capybara to talk to BookmarkManager
 Capybara.app = MakersBnB
