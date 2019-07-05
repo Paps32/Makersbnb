@@ -15,7 +15,7 @@
               <p><%= space.description %></p>
               <h4>£<%= space.price %>/night</h4>
               <button name="Edit" value="Edit">
-                <a href="/makers/spaces/edit">Edit</a>
+                <a href="/makers/spaces/edit/<%= space.id %>">Edit</a>
               </button>
             </li>
         <% end %>
