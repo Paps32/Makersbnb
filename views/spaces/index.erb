@@ -1,21 +1,23 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="/style.css"/>
-</head>
+</head> %>
+  <body>
+      <button name="Add space" value="Add space">
+        <a href="/makers/spaces/new">Add space</a>
+      </button>  
 
-<form action="/makers/spaces/new" method="get">
-  <input type="submit" value="Add space" />
-</form>
-
-<h1> Below are all the available listings: </h1>
-<ul>
-    <% @spaces.each do |space| %>
-        <li>
-           <h1><%= space.name %></h1>
-           <h4> Description </h4>
-           <p><%= space.description %></p>
-           <h4>£<%= space.price %>/night</h4>
-           <h4>£<%= space.price %></h4>
-         </li>
-    <% end %>
-</ul>
+    <h1> Below are all the available listings: </h1>
+    <ul>
+        <% @spaces.each do |space| %>
+            <li>
+              <h1><%= space.name %></h1>
+              <h4> Description </h4>
+              <p><%= space.description %></p>
+              <h4>£<%= space.price %>/night</h4>
+              <h4>£<%= space.price %></h4>
+            </li>
+        <% end %>
+    </ul>
+  </body>
+</html>

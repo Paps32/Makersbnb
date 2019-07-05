@@ -1,6 +1,6 @@
 feature 'view a list of spaces' do
   scenario 'user can view all the available listings' do
-    #login as user
+    # login as user
     sign_up
     log_in
     user = User.first(:email => 'makers@gmail.com')

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-# ENV['RACK_ENV'] = 'test'
 require 'data_mapper'
 require 'sinatra/base'
 require 'rubygems'
@@ -35,17 +33,8 @@ class MakersBnB < Sinatra::Base
     erb :login
   end
 
-  get '/makers/spaces/:id' do
-    @spaces = Space.all
-    erb :'spaces/index'
-  end
-
-  post '/makers/login' do
-    p "BEFORE"
-    user = User.first(:email => params[:email])
-    p "AFTER"
-
-    p "USER: #{user}"
+  post '/makers/login' do    
+    user = User.first(:email => params[:email])    
     if user
       redirect "/makers/spaces/#{user.id}"
     else
@@ -53,21 +42,25 @@ class MakersBnB < Sinatra::Base
     end
   end
 
-  get '/makers/spaces/new' do
+  get '/makers/spaces/new' do 
     erb :'spaces/new'
   end
 
-  post '/makers/spaces/new' do
-    name = params[:name]
-    description = params[:description]
-    price = params[:price]
+  post '/makers/spaces/new' do    
     user = Space.create({
-      :name => name,
-      :description => description,
-      :price => price
+      :name => params[:name],
+      :description => params[:description],
+      :price => params[:price],
+      :user_id => 1
     })
+    p user
     redirect "/makers/spaces/#{user.id}"
   end
+
+  get '/makers/spaces/:id' do
+    @spaces = Space.all
+    erb :'spaces/index'
+  end  
 
   run! if app_file == $0
 end
