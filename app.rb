@@ -7,7 +7,6 @@ require './db/data_mapper_setup'
 require 'dm-postgres-adapter'
 
 class MakersBnB < Sinatra::Base
-  enable :sessions
 
   get '/' do
     erb :index
@@ -54,6 +53,16 @@ class MakersBnB < Sinatra::Base
       :user_id => 1
     })
     redirect "/makers/spaces/#{user.id}"
+  end
+
+  post 'makers/spaces/edit' do
+    # space = Space.
+    redirect "/makers/spaces/#{user.id}"
+  end
+
+  get '/makers/spaces/edit/:id' do
+    p params
+    erb :'spaces/edit'
   end
 
   get '/makers/spaces/:id' do
