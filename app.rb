@@ -43,8 +43,6 @@ class MakersBnB < Sinatra::Base
     end
   end
 
-
-
   get '/makers/spaces/new' do
     p "PARAMS: #{params}"
     erb :'spaces/new'
@@ -59,7 +57,7 @@ class MakersBnB < Sinatra::Base
     redirect "/makers/spaces/#{user.id}"
   end
 
-    get '/makers/spaces/:id' do
+  get '/makers/spaces/:id' do
     @spaces = Space.all
     erb :'spaces/index'
   end  
