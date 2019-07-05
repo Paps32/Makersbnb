@@ -1,4 +1,3 @@
-
 def sign_up
   visit('/makers/sign-up')
   fill_in :email, with: "makers@gmail.com"

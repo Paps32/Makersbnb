@@ -6,7 +6,7 @@ feature 'index page' do
 end
 
 feature 'access to MakersBnB' do
-    scenario 'sign up' do
+  scenario 'sign up' do
     sign_up
     expect(page).to have_current_path('/makers/login')
   end
