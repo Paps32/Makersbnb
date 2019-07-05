@@ -56,6 +56,10 @@ class MakersBnB < Sinatra::Base
     redirect "/makers/spaces/#{user.id}"
   end
 
+  get '/makers/spaces/edit' do
+    
+  end
+
   get '/makers/spaces/:id' do
     @spaces = Space.all
     erb :'spaces/index'
