@@ -6,6 +6,7 @@ We are building a web application that allows users to list spaces they have ava
 
 ## User stories
 
+#### Done
 ```
 As a User
 So that I can join Makers BnB
@@ -35,6 +36,8 @@ So that I can see my spaces
 I would like to view a list of them.
 ```
 
+#### In progress
+
 ```
 As a User
 So that I can change the details of my spaces
@@ -46,6 +49,8 @@ As a User
 So that I can remove a space
 I would like to be able to delete a listing.
 ```
+
+#### To do
 
 ```
 As a User
@@ -108,7 +113,7 @@ Spaces
 | availability | user |
 
 
-## Setup
+## Instructions
 
 1. Fork the repo.
 2. Run `bundle`
@@ -118,3 +123,12 @@ Spaces
 CREATE DATABASE makersbnb_development;
 CREATE DATABASE makersbnb_test;
 ```
+
+### To run the application
+Use `rackup` to start the application.
+
+Go to http://localhost:9292/ to visit the application to see how
+it is working.
+
+### To run tests
+Use `rspec` to view tests.
